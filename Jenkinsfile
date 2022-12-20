@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh './mvnw test'
+                sh 'mvn test'
                 // bat '.\\mvnw test'
             }
 
