@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Run app') {
             steps {
-
+                sh 'fuser -k 5000/tcp || true'
                 sh 'java -jar ./target/demo-0.0.1-SNAPSHOT.jar'
             }
             post {
